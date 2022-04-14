@@ -39,13 +39,13 @@ const config = {
     const image = await chartJSNodeCanvas.renderToBuffer(configuration);
     const dataUrl = await chartJSNodeCanvas.renderToDataURL(configuration);
     const stream = chartJSNodeCanvas.renderToStream(configuration);
-    console.log({ dataUrl })
+    console.log({ image })
 
     const fs = require('fs');
 
-    fs.writeFile("chart.txt", dataUrl,
+    fs.writeFile("chart.png", image,
         {
-            encoding: "utf8",
+            encoding: "binary",
             flag: "w",
             mode: 0o666
         },
@@ -55,7 +55,7 @@ const config = {
             else {
                 console.log("File written successfully\n");
                 console.log("The written has the following contents:");
-                console.log(fs.readFileSync("chart.txt", "utf8"));
+                // console.log(fs.readFileSync("chart.txt", "utf8"));
             }
         });
 })();

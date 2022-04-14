@@ -14,7 +14,8 @@
   "dependencies": {
     "chartjs-node-canvas": "^4.1.6",
     "dotenv": "^16.0.0",
-    "telegraf": "^4.7.0"
+    "telegraf": "^4.7.0",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
